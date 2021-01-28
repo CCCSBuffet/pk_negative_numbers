@@ -2,12 +2,12 @@
 		.global	main
 		.align	2
 		
-print:	stp		x20, x30, [sp, -16]!
+print:	str		x30, [sp, -16]!
 		mov		w1, w0
 		mov		w2, w0
 		adr		x0, fmt
 		bl		printf
-		ldp		x20, x30, [sp], 16
+		ldr		x30, [sp], 16
 		ret
 
 main:	str		x30, [sp, -16]!
